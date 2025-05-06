@@ -1,0 +1,184 @@
+[
+    {
+      "_id": "1",
+      "name": "Music Concert",
+      "description": "Join us for an exciting music concert featuring top artists.",
+      "category": "Music",
+      "date": "2025-06-15",
+      "venue": "Grand Arena",
+      "price": 30,
+      "image": {
+        "url": "./imgs/1.jpg"
+      }
+    },
+    {
+      "_id": "2",
+      "name": "Art Exhibition",
+      "description": "Explore modern art in a beautiful gallery setting.",
+      "category": "Art",
+      "date": "2025-07-01",
+      "venue": "City Gallery",
+      "price": 20,
+      "image": {
+          "url": "./imgs/desktop.jpg"
+      }
+    },
+    {
+      "_id": "3",
+      "name": "Tech Conference",
+      "description": "Network with industry professionals and discover the latest in tech.",
+      "category": "Technology",
+      "date": "2025-08-05",
+      "venue": "Tech Hub",
+      "price": 100,
+      "image": {
+                "url": "./imgs/desktop.jpg"
+      }
+    },
+    {
+      "_id": "4",
+      "name": "Music Concert",
+      "description": "Join us for an exciting music concert featuring top artists.",
+      "category": "Music",
+      "date": "2025-06-15",
+      "venue": "Grand Arena",
+      "price": 30,
+      "image": {
+                "url": "./imgs/desktop.jpg"
+      }
+    },
+    {
+      "_id": "5",
+      "name": "Art Exhibition",
+      "description": "Explore modern art in a beautiful gallery setting.",
+      "category": "Art",
+      "date": "2025-07-01",
+      "venue": "City Gallery",
+      "price": 20,
+      "image": {
+        "url": "./imgs/desktop.jpg"
+      }
+    },
+    {
+      "_id": "6",
+      "name": "Tech Conference",
+      "description": "Network with industry professionals and discover the latest in tech.",
+      "category": "Technology",
+      "date": "2025-08-05",
+      "venue": "Tech Hub",
+      "price": 100,
+      "image": {
+          "url": "./imgs/1.jpg"
+      }
+    },
+    {
+      "_id": "7",
+      "name": "Music Concert",
+      "description": "Join us for an exciting music concert featuring top artists.",
+      "category": "Music",
+      "date": "2025-06-15",
+      "venue": "Grand Arena",
+      "price": 30,
+      "image": {
+              "url": "./imgs/desktop.jpg"
+      }
+    },
+    {
+      "_id": "8",
+      "name": "Art Exhibition",
+      "description": "Explore modern art in a beautiful gallery setting.",
+      "category": "Art",
+      "date": "2025-07-01",
+      "venue": "City Gallery",
+      "price": 20,
+      "image": {
+             "url": "./imgs/desktop.jpg"
+      }
+    },
+    {
+      "_id": "9",
+      "name": "Tech Conference",
+      "description": "Network with industry professionals and discover the latest in tech.",
+      "category": "Technology",
+      "date": "2025-08-05",
+      "venue": "Tech Hub",
+      "price": 100,
+      "image": {
+              "url": "./imgs/desktop.jpg"
+      }
+    },
+    {
+      "_id": "10",
+      "name": "Music Concert",
+      "description": "Join us for an exciting music concert featuring top artists.",
+      "category": "Music",
+      "date": "2025-06-15",
+      "venue": "Grand Arena",
+      "price": 30,
+      "image": {
+              "url": "./imgs/desktop.jpg"
+      }
+    },
+
+    {
+      "_id": "11",
+      "name": "Art Exhibition",
+      "description": "Explore modern art in a beautiful gallery setting.",
+      "category": "Art",
+      "date": "2025-07-01",
+      "venue": "City Gallery",
+      "price": 20,
+      "image": {
+              "url": "./imgs/desktop.jpg"
+      }
+    },
+    {
+      "_id": "12",
+      "name": "Tech Conference",
+      "description": "Network with industry professionals and discover the latest in tech.",
+      "category": "Technology",
+      "date": "2025-08-05",
+      "venue": "Tech Hub",
+      "price": 100,
+      "image": {
+              "url": "./imgs/desktop.jpg"
+      }
+    },
+    {
+      "_id": "13",
+      "name": "Music Concert",
+      "description": "Join us for an exciting music concert featuring top artists.",
+      "category": "Music",
+      "date": "2025-06-15",
+      "venue": "Grand Arena",
+      "price": 30,
+      "image": {
+              "url": "./imgs/desktop.jpg"
+      }
+    },
+    {
+      "_id": "14",
+      "name": "Art Exhibition",
+      "description": "Explore modern art in a beautiful gallery setting.",
+      "category": "Art",
+      "date": "2025-07-01",
+      "venue": "City Gallery",
+      "price": 20,
+      "image": {
+              "url": "./imgs/desktop.jpg"
+      }
+    },
+    {
+      "_id": "15",
+      "name": "Tech Conference",
+      "description": "Network with industry professionals and discover the latest in tech.",
+      "category": "Technology",
+      "date": "2025-08-05",
+      "venue": "Tech Hub",
+      "price": 100,
+      "image": {
+              "url": "./imgs/desktop.jpg"
+      }
+    }
+  ]
+  

@@ -1,0 +1,64 @@
+.event-details-page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .event-details-image {
+    width: 100%;
+    border-radius: 12px;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 24px;
+  }
+  
+  .event-details-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .event-details-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1A1A1A;
+  }
+  
+  .event-details-meta {
+    font-size: 16px;
+    color: #555555;
+  }
+  
+  .event-details-description {
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.6;
+  }
+  
+  .event-details-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3A86FF;
+  }
+  
+  .event-details-book-btn {
+    margin-top: 16px;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .event-details-book-btn:hover {
+    background-color: #e05555;
+  }
+  

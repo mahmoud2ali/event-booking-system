@@ -1,0 +1,121 @@
+.filter-sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: 100vh;
+    width: 240px;
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    padding: 50px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .filter-sidebar h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .filter-sidebar label {
+    margin-top: 15px;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .filter-sidebar select,
+  .filter-sidebar input[type="number"],
+  .filter-sidebar input[type="date"] {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+  }
+  
+  .filter-sidebar .category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .category-buttons button {
+    flex: 1 1 auto;
+    padding: 8px 12px;
+    background-color: #e3e6f0;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .category-buttons button:hover,
+  .category-buttons button.active {
+    background-color: #3a86ff;
+    color: #fff;
+  }
+  
+
+
+  .toggle-filter-btn {
+    position: fixed;
+    top: 80px;
+    left: 1px;
+    height: 100vh;
+    width: 10px;
+    z-index: 1000;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    color: #3a86ff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+  }
+  
+  @media (max-width: 900px) {
+    .toggle-filter-btn {
+      display: block;
+    }
+    .filter-sidebar {
+      position: fixed;
+      top: 60px;
+      left: -100%;
+      width: 80%;
+      background-color: #f4f6f8;
+      z-index: 999;
+      transition: left 0.3s ease-in-out;
+      box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
+    }
+  
+    .filter-sidebar.open {
+      left: 0;
+    }
+  
+    .filter-sidebar h3 {
+      font-size: 18px;
+    }
+  
+    .filter-sidebar select,
+    .filter-sidebar input[type="number"],
+    .filter-sidebar input[type="date"] {
+      font-size: 13px;
+    }
+  
+    .category-buttons button {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  }
+  

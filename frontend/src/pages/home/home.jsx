@@ -48,15 +48,6 @@ function Home() {
       }
     };
   
-
-      
-  // const filteredEvents = events.filter(event => {
-  //   return (!filters.category || event.category === filters.category) &&
-  //          (!filters.maxPrice || event.price <= parseFloat(filters.maxPrice)) &&
-  //          (!filters.date || event.date === filters.date);
-  // });
-
-  
   const filteredEvents = events.filter((event) => {
     const matchesCategory = filters.category ? event.category === filters.category : true;
     const matchesPrice = filters.maxPrice ? event.price <= Number(filters.maxPrice) : true;

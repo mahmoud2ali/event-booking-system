@@ -9,6 +9,9 @@ export function registerUser(userData) {
       console.log("userData: ", userData)
       const response = await request.post("/auth/register", userData);
       dispatch(authActions.register(response.data.message));
+      setTimeout(() => {
+        dispatch(authActions.register(null));
+      }, 3000);
     } catch (error) {
       toast.error(error.response.data.message);
     }

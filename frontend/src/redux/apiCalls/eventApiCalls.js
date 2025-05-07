@@ -72,6 +72,8 @@ export function toggleBookEvent(eventId) {
             dispatch(eventActions.bookdEvent(response.data));
             // console.log("Booking response: ", response.data);
             // toast.success("Event booked successfully!");
+            // dispatch get single event to update the booking status
+            dispatch(eventActions.setSingleEvent(response.data));
         } catch (error) {
             console.error("Error booking event:", error);
             toast.error(error.response.data.message);

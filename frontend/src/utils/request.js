@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const request = axios.create({
-    baseURL: "http://localhost:8000/api"
+    baseURL: "https://event-booking-system-rhka.onrender.com/api",
 });
 
 export default request;

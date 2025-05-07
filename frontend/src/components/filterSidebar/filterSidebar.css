@@ -3,15 +3,16 @@
     top: 60px;
     left: 0;
     height: 100vh;
-    width: 240px;
+    width: 350px;
     background-color: #ffffff;
     border-right: 1px solid #e0e0e0;
-    padding: 50px;
+    padding: 50px 35px;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
     z-index: 10;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
   }
   
   .filter-sidebar h3 {
@@ -83,6 +84,24 @@
     cursor: pointer;
     display: none;
   }
+
+  .clear-filters-btn {
+    margin-top: 20px;
+    padding: 10px 16px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .clear-filters-btn:hover {
+    background-color: #e44f4f;
+  }
+  
   
   @media (max-width: 900px) {
     .toggle-filter-btn {

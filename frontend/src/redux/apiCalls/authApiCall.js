@@ -1,6 +1,7 @@
 import { authActions } from "../slices/authSlice";
 import request from "../../utils/request";
 import { toast } from "react-toastify";
+import { createCookieSessionStorage } from "react-router-dom";
 
 export function registerUser(userData) {
   return async (dispatch) => {
@@ -9,8 +10,7 @@ export function registerUser(userData) {
       const response = await request.post("/auth/register", userData);
       dispatch(authActions.register(response.data.message));
     } catch (error) {
-      console.error("Error registering user:", error);
-
+      toast.error(error.response.data.message);
     }
   };
 }
@@ -22,7 +22,7 @@ export function loginUser(userData) {
         dispatch(authActions.login(response.data));
         localStorage.setItem("user", JSON.stringify(response.data));
         } catch (error) {
-          toast.error("Error logging out:", error);
+          toast.error(error.response.data.message);
 
         }
     };
@@ -33,7 +33,7 @@ export function logoutUser() {
     try {
       dispatch(authActions.logout());
     } catch (error) {
-      toast.error("Error logging out:", error);
+      toast.error(error.response.data.message);
     }
   };
 }

@@ -30,80 +30,21 @@ const getAllEvents = asyncHandler(async (req, res) => {
 });
 
 
-// @desc    Book an event
-// @route   POST /api/events/book/:eventId
-// @access  Private (User must be logged in)
-const bookEvent = asyncHandler(async (req, res) => {
+//get single event by id
+// @desc    Get single event by ID
+// @route   GET /api/events/:eventId
+// @access  Public
+const getSingleEvent = asyncHandler(async (req, res) => {
   const eventId = req.params.eventId;
-  const userId = req.user._id; // Assuming user is authenticated (JWT)
-
+  console.log("event ID: ",eventId)
   // Find the event by ID
   const event = await Event.findById(eventId);
-  if (!event) {
-    res.status(404);
-    throw new Error('Event not found');
+  if (!event) { 
+    return res.status(404).json({ message: 'Event not found' });
   }
 
-  // Check if the user has already booked the event
-  if (event.bookedBy.includes(userId)) {
-    res.status(400);
-    throw new Error('You have already booked this event');
-  }
-
-  // Add the user to the bookedBy array
-  event.bookedBy.push(userId);
-  await event.save();
-
-  res.status(200).json({ message: 'Event booked successfully' });
-});
-
-
-
-// @desc    Cancel a booked event
-// @route   DELETE /api/book/:eventId
-// @access  Private
-const cancelBooking = asyncHandler(async (req, res) => {
-  const eventId = req.params.eventId;
-  const userId = req.user._id; // From protect middleware
-
-  // Find the event
-  const event = await Event.findById(eventId);
-  if (!event) {
-    res.status(404);
-    throw new Error('Event not found');
-  }
-
-  // Check if user has booked the event
-  const alreadyBooked = event.bookedBy.includes(userId);
-  if (!alreadyBooked) {
-    res.status(400);
-    throw new Error('You have not booked this event');
-  }
-
-  // Remove user from bookedBy array
-  event.bookedBy = event.bookedBy.filter(id => id.toString() !== userId.toString());
-
-  await event.save();
-
-  res.status(200).json({ message: 'Booking cancelled successfully' });
-});
-
-
-
-// @desc    Get all users who booked an event
-// @route   GET /api/events/booked/:eventId
-// @access  Only Admin
-const getBookedUsers = asyncHandler(async (req, res) => {
-    const eventId = req.params.eventId;
-    
-    // Find the event and populate bookedBy field
-    const event = await Event.findById(eventId).populate('bookedBy', 'name email');
-    if (!event) {
-        res.status(404);
-        throw new Error('Event not found');
-    }
-    
-    res.status(200).json(event.bookedBy); // Return the list of booked users
+  // Return the event details
+  res.status(200).json(event);
 });
 
 
@@ -113,8 +54,6 @@ const getBookedUsers = asyncHandler(async (req, res) => {
 // @route   POST /api/admin/event
 // @access  Admin
 const adminCreateEvent = asyncHandler(async (req, res) => {
-  console.log(req.user);
-  console.log(req.body.name)
   const { name, description, category, date, venue, price } = req.body;
 
   if(!req.file)
@@ -123,8 +62,7 @@ const adminCreateEvent = asyncHandler(async (req, res) => {
   }
 
   if (!name || !description || !date || !venue || !price) {
-    res.status(400);
-    throw new Error('Please provide all required fields');
+    return res.status(400).json({ message: 'Please provide all required fields' });
   }
 
 
@@ -249,9 +187,7 @@ const updateEvent = asyncHandler(async (req, res) => {
 
 module.exports = {
     getAllEvents,
-    bookEvent,
-    cancelBooking,
-    getBookedUsers,
+    getSingleEvent,
     adminCreateEvent,
     adminDeleteEvent,
     updateEvent

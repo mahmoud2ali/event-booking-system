@@ -13,15 +13,13 @@ const registerUser = asyncHandler(async (req, res) => {
   
     // Check if all fields are provided
     if (!name || !email || !password) {
-      res.status(400);
-      throw new Error('Please provide name, email, and password');
+      return res.status(400).json({ message: 'Please provide name, email, and password' });
     }
   
     // Check if user already exists
     const userExists = await User.findOne({ email });
     if (userExists) {
-      res.status(400);
-      throw new Error('User already exists');
+      return res.status(400).json({ message: 'User already exists' });
     }
   
     // Hash the password
@@ -38,8 +36,7 @@ const registerUser = asyncHandler(async (req, res) => {
     if (user) {
       res.status(201).json({message: 'User created successfully, please login'});
     } else {
-      res.status(500);
-      throw new Error('User creation failed');
+      res.status(500).json({ message: 'User creation failed' });
     }
 });
 
@@ -53,22 +50,19 @@ const loginUser = asyncHandler(async (req, res) => {
   
     // Check for missing fields
     if (!email || !password) {
-      res.status(400);
-      throw new Error('Please provide both email and password');
+      return res.status(400).json({ message: 'Please provide email and password' });
     }
   
     // Check if user exists
     const user = await User.findOne({ email });
     if (!user) {
-      res.status(401);
-      throw new Error('Invalid credentials');
+      return res.status(401).json({ message: 'Invalid credentials' });
     }
   
     // Compare passwords
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      res.status(401);
-      throw new Error('Invalid credentials');
+      return res.status(401).json({ message: 'Invalid credentials' });
     }
   
     // Generate JWT

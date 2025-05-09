@@ -111,17 +111,18 @@
 @media (max-width: 768px) {
   .nav {
     position: absolute;
-    top: 64px;
-    left: 0;
+    top: 80px;
     width: 100%;
+    left: 0;
     flex-direction: column;
     background: #fff;
     padding: 20px;
     gap: 20px;
     transition: clip-path 0.3s ease-in-out, opacity 0.3s;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Hidden */
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Hidden by default */
     opacity: 0;
     pointer-events: none;
+    z-index: 100;
   }
 
   .nav.show {
@@ -130,20 +131,24 @@
     pointer-events: auto;
   }
 
+  .nav li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
   .menu {
     display: block;
   }
 
   .user {
-    margin: 0;
-    position: absolute;
-    top: 10px;
-    right: 60px;
+    position: relative;
+    margin: 0 auto;
   }
 
   .dropdown {
-    top: 40px;
-    right: 0;
-    width: 130px;
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
   }
 }

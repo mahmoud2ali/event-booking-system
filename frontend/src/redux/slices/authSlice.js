@@ -4,6 +4,7 @@ const initialState = {
   user: localStorage.getItem("user")? 
   JSON.parse(localStorage.getItem("user")) : null,
   registerMessage: null,
+  loading: false,
 };
 
 const authSlice = createSlice({
@@ -19,7 +20,10 @@ const authSlice = createSlice({
         },
         register: (state, action) => {  
             state.registerMessage = action.payload;
-        }
+        },
+        setLoading: (state, action) => {
+            state.loading = action.payload; 
+        },
     },
 }); 
 

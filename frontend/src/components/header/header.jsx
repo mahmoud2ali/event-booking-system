@@ -15,6 +15,7 @@ function Header() {
 
   const handleLogout = () => {
     setDropdown(false);
+    steToggle(false);
     dispatch(logoutUser());
   }
   return (

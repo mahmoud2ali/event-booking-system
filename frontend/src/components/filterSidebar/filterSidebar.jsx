@@ -37,7 +37,9 @@ function FilterSidebar({ filters, setFilters }) {
       <button 
         className="toggle-filter-btn" 
         onClick={() => setShowSidebar(prev => !prev)}
-      ><i className="bi bi-arrow-bar-right"></i></button>
+      >
+        <i className={`${showSidebar ? "bi bi-arrow-bar-left" : "bi bi-arrow-bar-right"}  `}></i>
+      </button>
       <aside className={`filter-sidebar ${showSidebar ? 'open' : ''}`}>
         <h3>Filter Events</h3>
 

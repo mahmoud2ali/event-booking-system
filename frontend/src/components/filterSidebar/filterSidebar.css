@@ -67,24 +67,32 @@
   }
   
 
-
   .toggle-filter-btn {
     position: fixed;
     top: 80px;
-    left: 1px;
-    height: 100vh;
-    width: 10px;
+    left: 0;
     z-index: 1000;
-    padding: 0 20px;
-    background-color: #ffffff;
-    color: #3a86ff;
+    height: 40px;
+    width: 40px;
+    background-color: #3a86ff;
+    color: #fff;
     border: none;
-    /* border-radius: 8px; */
-    font-weight: bold;
+    border-radius: 0 8px 8px 0;
     cursor: pointer;
     display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+  }
+  .toggle-filter-btn:hover {
+  background-color: #265fd6;
   }
 
+  .toggle-filter-btn i {
+    font-size: 20px;
+  }
+ 
   .clear-filters-btn {
     margin-top: 20px;
     padding: 10px 16px;

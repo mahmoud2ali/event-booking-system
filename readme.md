@@ -41,3 +41,14 @@ You can try the deployed version of the app here:
 - **Deployment**: Vercel (Frontend), Render (Backend)
 
 ---
+
+# Branch Setup
+
+This repository uses two primary branches for development and deployment:
+
+## Main Branch
+- The `main` branch is used for development.
+- All coding and feature development are done on this branch.
+
+## Master Branch
+- The `master` branch is used for deployment.

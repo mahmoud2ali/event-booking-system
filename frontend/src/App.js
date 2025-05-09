@@ -11,6 +11,7 @@ import AdminPage from './pages/admin/admin';
 import CreateEventForm from './components/forms/createEventForm';
 import { ToastContainer } from 'react-toastify';
 import EditEvent from './components/forms/editEventForm';
+import NotFound from './pages/notFound/notFound';
 
 function App() {
   const {user} = useSelector(state => state.auth);
@@ -33,8 +34,11 @@ function App() {
           <Route index element={user?.isAdmin ? <AdminPage /> : <Navigate to="/"/> } />
           <Route path='create-event' element={ user?.isAdmin ? <CreateEventForm /> : <Navigate to="/"/>} />
           <Route path='edit-event/:id' element={ user?.isAdmin ?  <EditEvent /> : <Navigate to="/"/>} />
-          </Route>
-        </Routes>
+        </Route>
+
+        <Route path="*" element={<NotFound />} />
+
+      </Routes>
     </BrowserRouter>
   );
 }

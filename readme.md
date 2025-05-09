@@ -1,40 +1,43 @@
- # Event Booking System
+# 🌟 Event Booking System
 
-A full-stack event booking system built using **Node.js**, **Express**, **MongoDB**, **JWT Authentication**, and **Cloudinary** for image upload. This system allows users to register, log in, browse events, book events, and manage bookings. Admin users can create, update, delete, and view events.
-
-## Features
-
-- **User Registration**: Users can register with basic information (name, email, password).
-- **User Login**: Users can log in using their credentials and receive a JWT token.
-- **Event Management** (Admin Only):
-  - Admins can create, update, and delete events.
-- **Event Booking**: Users can browse available events and book tickets.
-- **Event Cancellation**: Users can cancel bookings.
-   
-
+This is a full-stack web application that allows users to browse, view, and book events, and provides an admin interface for managing events. The system is built using the MERN stack (MongoDB, Express.js, React, Node.js) and integrates AI tools such as ChatGPT and GitHub Copilot throughout the development process.
 
 ---
 
+## 🚀 Features
 
-## 📦 Tech Stack
-- **Frontend**: React.js
-- **Dependencies**:
-   - State Management: `@reduxjs/toolkit`, `react-redux`
-   - HTTP: `axios`
-   - Animations: `canvas-confetti`
-   - Routing: `react-router-dom`
-   - Notifications: `react-toastify`, `sweetalert2`
-   - Loaders: `react-spinners`
-- **State Management**: Redux (frontend state handling)
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB & Mongoose
-- **Authentication**: JWT (JSON Web Token)
-- **Image Upload**: Cloudinary + Multer
-- **Others**: dotenv, cors express-async-handler 
+- User authentication (Register/Login)
+- Browse events on the home page
+- View detailed event information
+- Book events with a single click
+- Admin panel with full event CRUD capabilities
+- User roles (Admin, User)
+- AI-assisted development process
 
 ---
 
-## 🔗 Explore More
+## 📈 Admin Access
 
-- **Frontend**: Navigate to the [Frontend Documentation](./frontend/README.md) for detailed information about the React.js implementation.
-- **Backend**: Navigate to the [Backend Documentation](./backend/README.md) for detailed information about the Node.js and Express.js implementation.
+To explore the admin panel, use the following credentials:
+
+- **Email**: admin@email.com  
+- **Password**: admin
+
+Alternatively, you can register as a basic user to explore regular functionality.
+
+---
+
+## 📍 Try the App
+
+You can try the deployed version of the app here:  
+👉 [Event Booking System](https://event-booking-system-rouge.vercel.app/)
+
+
+## 📚 Technologies Used
+
+- **Frontend**: React, Redux Toolkit, React Router DOM, Axios, Toastify
+- **Backend**: Node.js, Express.js, MongoDB, JWT, Cloudinary, Multer
+- **AI Tools**: ChatGPT, GitHub Copilot
+- **Deployment**: Vercel (Frontend), Render (Backend)
+
+---

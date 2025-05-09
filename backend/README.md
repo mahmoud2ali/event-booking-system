@@ -1,102 +1,96 @@
-## 🚀 Getting Started
+# 💻 Backend - Event Booking System
 
-
-## Prerequisites
-
-- Node.js (v14 or higher)
-- MongoDB (running locally or using a cloud service like MongoDB Atlas)
-- Cloudinary account (for image upload)
-
-
-
-### Installation Steps
-
-1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/mahmoud2ali/event-booking-system.git
-   cd backend
-   ```
-
-2. **Install dependencies**  
-   ```bash
-   npm install
-   ```
-
-3. **Create a `.env` file** in the `backend` directory with the following variables:
-   ```env
-   PORT=8000
-   MONGO_URI=your_mongo_connection_string
-   JWT_SECRET=your_jwt_secret
-   CLOUDINARY_CLOUD_NAME=your_cloud_name
-   CLOUDINARY_API_KEY=your_api_key
-   CLOUDINARY_API_SECRET=your_api_secret
-   ```
-
-4. **Run the server in development mode**  
-   ```bash
-   npm run dev
-   ```
+This is the backend API for the Event Booking System. It handles user authentication, event management, and event bookings.
 
 ---
 
+## 📁 Project Setup
 
-## 📌 API Endpoints
+### Prerequisites
 
-### 🔐 Authentication
-- `POST /api/auth/register` – Register a new user
-- `POST /api/auth/login` – Login and receive a JWT token
+- Node.js (v18 or later)
+- MongoDB database
 
-### 🎫 Public Events
-- `GET /api/events/` – Get all events
+### Installation
 
-### 🎟️ Event Booking (Requires Authentication)
-- `POST /api/events/book/:eventId` – Book a ticket for an event
-- `DELETE /api/events/book/:eventId` – Cancel a booking
-
-### 🛠️ Admin Only (Requires Admin Auth)
-- `POST /api/events/admin/create` – Create a new event (with optional image)
-- `PUT /api/events/admin/update/:eventId` – Update an event (with optional image)
-- `DELETE /api/events/admin/delete/:eventId` – Delete an event
-
-> 🛡️ **Note:** Protected routes require a valid JWT token in the header:
-> ```
-> Authorization: Bearer <your_token>
-> ```
-
-
-
-## 📁 Project Structure
-
+```bash
+cd backend
+npm install
 ```
-/event-booking system
-├── /dataBase Config
-├── /controllers
-│   ├── authController.js        # Register, Login
-│   ├── eventController.js       # Create, Update, Delete, Get Events
-│   └── bookingController.js     # Booking and Cancellation
-├── /models
-│   └── userModel.js             # user schema
-│   └── eventModel.js            # Event schema
-├── /middleware
-│   ├── authMiddleware.js        # Authentication middleware
-│   ├── adminMiddleware.js       # Admin check middleware
-│   └── imageUpload.js           # Image upload middleware
-├── /utils
-│   └── cloudinary.js            # Cloudinary image handling
-├── /routes
-│   ├── authRoute.js             # Authentication routes
-│   ├── eventRoute.js            # Event routes
-│   └── bookingRoute.js          # Booking routes
-├── /imgs                        # Folder for temporary image storage
-├── server.js                    # Main server entry point
-├── .env                         # Environment variables
-├── package.json                 # Project dependencies
-└── README.md                    # Project documentation
+
+### Configuration
+
+Create a `.env` file in the `backend` directory with the following environment variables:
+
+```env
+PORT=8000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+CLOUDINARY_CLOUD_NAME=your_cloudinary_name
+CLOUDINARY_API_KEY=your_cloudinary_key
+CLOUDINARY_API_SECRET=your_cloudinary_secret
 ```
 
 ---
 
+## 🚀 Running the Server
 
-## 🧪 Development Scripts
+Start the development server:
 
-- `npm run dev` – Start the server using nodemon
+```bash
+npm run dev
+```
+
+The server will start on:  
+📍 `http://localhost:8000`
+
+---
+
+## ⚖️ API Overview
+
+### 🔐 Authentication Routes
+
+- `POST api/auth/register` – Register user  
+- `POST api/auth/login` – Login user  
+
+---
+
+### 📅 Event Routes
+
+- `GET api/events/` – Get all events  
+- `GET api/events/:eventId` – Get single event by ID  
+
+---
+
+### 📝 Booking Route
+
+- `PUT api/book/:eventId` – Book an event *(Protected)*  
+
+---
+
+### 🛠️ Admin Routes
+
+- `POST api/events/admin/create-event` – Create event *(Admin only)*  
+- `PUT api/events/admin/update-event/:eventId` – Update event *(Admin only)*  
+- `DELETE api/events/admin/delete-event/:eventId` – Delete event *(Admin only)*  
+
+⚠️ *All admin routes are protected and require valid JWT tokens and admin role.*
+
+---
+
+## 📂 Technologies Used
+
+- **Express.js** - Web framework
+- **MongoDB & Mongoose** - Database & ODM
+- **JWT** - Authentication
+- **Multer & Cloudinary** - Image upload
+- **dotenv** - Environment variable management
+- **cookie-parser**, **cors**
+
+---
+
+## 🌐 Deployment
+
+- Backend is deployed on **Render**
+- Base URL (in deployment) : https://event-booking-system-rhka.onrender.com
+

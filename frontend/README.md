@@ -1,57 +1,47 @@
-# Event Booking Frontend
+# 🌐 Frontend - Event Booking System
 
-This is the frontend of the Event Booking application, built using **React**. It provides a user-friendly interface for browsing and booking events.
+This is the frontend React application for the Event Booking System. It provides the user interface for browsing events, booking them, and accessing the admin panel.
 
-## Features
-- Event listing and details
-- User authentication
-- Booking management
+---
 
-## Prerequisites
-- Node.js (v16 or later)
-- npm or yarn
+## 📁 Project Setup
 
-## Getting Started
+### Prerequisites
 
-### 1. Clone the Repository
+- Node.js (v18 or later)
+- npm
+
+### Installation
+
 ```bash
-git clone https://github.com/mahmoud2ali/event-booking-system.git
-cd event-booking-frontend
-```
-
-### 2. Install Dependencies
-```bash
+cd frontend
 npm install
-# or
-yarn install
 ```
 
-### 3. Run the Development Server
+### Running the App
+
 ```bash
 npm start
-# or
-yarn start
 ```
-The app will be available at `http://localhost:3000`.
 
-### 4. Build for Production
-```bash
-npm run build
-# or
-yarn build
-```
-The production-ready files will be in the `build` directory.
+This runs the app in development mode at:  
+📍 `http://localhost:3000`
 
-## Folder Structure
-- `src/`: Contains the React components, styles, and logic.
-- `public/`: Static assets like `index.html`.
+---
 
-## Technologies Used
-- React
-- React Router
-- Axios (for API calls)
+## 🚀 Features
 
+- User registration and login
+- Events grid layout
+- Conditional rendering for booked events
+- Event detail pages
+- Admin panel to manage events
+- Toast notifications
+- Confetti effect after successful booking
 
-## Contributing
-Feel free to submit issues or pull requests to improve the project.
+---
 
+## ⚖️ Packages Used
+
+- `react`, `react-router-dom`, `redux-toolkit`, `axios`
+- `react-toastify`, `canvas-confetti`, `sweetalert2`, `react-spinners`

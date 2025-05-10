@@ -30,7 +30,7 @@ Alternatively, you can register as a basic user to explore regular functionality
 ## 📍 Try the App
 
 You can try the deployed version of the app here:  
-👉 [Event Booking System](https://event-booking-system-rouge.vercel.app/)
+👉 [Event Booking System](https://event-booking-system-liard.vercel.app/)
 
 
 ## 📚 Technologies Used

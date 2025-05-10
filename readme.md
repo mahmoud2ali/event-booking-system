@@ -50,8 +50,5 @@ This repository uses two primary branches for development and deployment:
 - The `main` branch is used for development.
 - All coding and feature development are done on this branch.
   
-> **⚠️ Important:** This repository uses the `master` branch for deployment only, and it is set as the default branch.  
-> **Make sure to switch to the `main` branch when setting up or working on the project.**
-
-## Master Branch
-- The `master` branch is used for deployment.
+## Frontend deployment Branch
+- The `frontend-deployment` branch is used for frontend deployment.
